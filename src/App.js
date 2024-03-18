@@ -65,22 +65,25 @@ const DynamicTable = () => {
           <div key={index}>
             <h2>{column.toUpperCase()}</h2>
             <ul>
-              {getUniqueValues(column).map((value, idx) => (
-                <li key={idx}>
-                  <label className="switch">
-                    <input
-                      type="checkbox"
-                      checked={
-                        selectedCheckboxes[column] &&
-                        selectedCheckboxes[column].includes(value)
-                      }
-                      onChange={() => handleCheckBox(column, value)}
-                    />
-                    <span className="slider round"></span>
-                  </label>
-                  {value}
-                </li>
-              ))}
+              {getUniqueValues(column).map(
+                (value, idx) =>
+                  value && (
+                    <li key={idx}>
+                      <label className="switch">
+                        <input
+                          type="checkbox"
+                          checked={
+                            selectedCheckboxes[column] &&
+                            selectedCheckboxes[column].includes(value)
+                          }
+                          onChange={() => handleCheckBox(column, value)}
+                        />
+                        <span className="slider round"></span>
+                      </label>
+                      {value}
+                    </li>
+                  )
+              )}
             </ul>
           </div>
         );
