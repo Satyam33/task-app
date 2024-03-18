@@ -1,0 +1,42 @@
+.table-container {
+    margin: 20px;
+  }
+  
+  .data-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .data-table th {
+    text-align: left;
+    background-color: #f2f2f2;
+  }
+  
+  .data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* New styles for unique values section */
+.unique-values-section {
+ 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap the items to the next line if they exceed the container width */
+  }
+  
+  .unique-values-section > div {
+    margin-right: 20px; /* Add spacing between sections */
+  }
+  
+  .unique-values-section h1 {
+    margin-bottom: 10px;
+  }
+  
+  .unique-values-section h2 {
+    margin-bottom: 5px;
+  }
