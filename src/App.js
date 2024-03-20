@@ -31,10 +31,10 @@ const DynamicTable = () => {
   const handleSearchChange = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
-    const filteredData = data.filter((item) =>
+    const searchData = filteredData.filter((item) =>
       item[header[1]].toLowerCase().includes(query)
     );
-    setFilteredData(filteredData);
+    setFilteredData(searchData);
   };
 
   const handleCheckBox = (column, value) => {
